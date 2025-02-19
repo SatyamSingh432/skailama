@@ -1,5 +1,6 @@
 import "./WelcomePage.css";
 import whiteLogo from "../../assets/QuesLogo.svg";
+import Login from "./Login";
 const WelcomePage = () => {
   return (
     <>
@@ -18,7 +19,9 @@ const WelcomePage = () => {
             </div>
           </div>
         </div>
-        <div className="login-container"></div>
+        <div className="login-register-container">
+          <Login />
+        </div>
       </div>
     </>
   );
