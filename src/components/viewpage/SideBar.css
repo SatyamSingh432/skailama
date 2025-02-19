@@ -1,0 +1,107 @@
+.sidebar {
+  width: 27.62rem;
+  height: 100vh;
+  background-color: #fff;
+  border-right: 0.06rem solid #ddd;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+}
+
+.sidebar-logo-container {
+  display: flex;
+  padding-top: 4rem;
+  padding-left: 3.31rem;
+  padding-bottom: 2.22rem;
+  align-items: center;
+  font-size: 1.75rem;
+  width: 11.66rem;
+  height: 2.47rem;
+  font-weight: bold;
+  color: #6b3eff;
+}
+.sidebar-logo-container img {
+  width: 100%;
+  height: 100%;
+}
+.sidebar-child-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+.sidebar-menu {
+  padding-right: 3rem;
+  padding-bottom: 2.5rem;
+}
+
+.sidebar-option {
+  display: block;
+  font-size: 1.56rem;
+  color: #555;
+  padding: 0.62rem;
+  text-decoration: none;
+  border-radius: 0.31rem;
+  padding-left: 3.75rem;
+}
+.sidebar-option:hover,
+.active {
+  background-color: #f4f1ff;
+  color: #6b3eff;
+  font-weight: bold;
+}
+
+.help-section {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.25rem;
+}
+
+.setting {
+  padding-left: 3.75rem;
+  padding-top: 25vh;
+}
+.setting span {
+  font-size: 1.56rem;
+  padding-left: 0.8rem;
+}
+.hr {
+  width: 21.67rem;
+  border-style: none;
+  background-color: #cccccc;
+  margin-left: 3rem;
+  height: 0.06rem;
+}
+.user-profile {
+  display: flex;
+  align-items: center;
+  padding-top: 2.56rem;
+  padding-left: 3.81rem;
+  padding-bottom: 3.31rem;
+  gap: 0.62rem;
+  cursor: pointer;
+}
+.profile-pic {
+  width: 2.89rem;
+  height: 2.89rem;
+}
+.profile-pic img {
+  height: 100%;
+  width: 100%;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.31rem;
+}
+
+.user-name {
+  font-weight: bold;
+}
+.user-email {
+  font-size: 0.75rem;
+  color: #777;
+}
