@@ -6,8 +6,8 @@
   padding-right: 7.4rem;
 }
 .nav-logo {
-  width: 268px;
-  height: 57px;
+  width: 16.75rem;
+  height: 3.5rem;
 }
 .nav-logo img {
   width: 100%;
@@ -18,8 +18,8 @@
   gap: 19px;
 }
 .setting {
-  font-size: 54px;
+  font-size: 3.37rem;
 }
 .notification {
-  font-size: 64px;
+  font-size: 4rem;
 }

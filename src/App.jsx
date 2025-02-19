@@ -1,30 +1,12 @@
 import "./App.css";
 // import WelcomePage from "./components/welcome/WelcomePage";
-import CreateProjectPage from "./components/createpage/CreateProjectPage";
+// import CreateProjectPage from "./components/createpage/CreateProjectPage";
+import ProjectPage from "./components/createpage/ProjectPage";
 function App() {
   return (
     <>
-      <CreateProjectPage />
-      <div className="create-page-">
-        <h1>Create a New Project</h1>
-        <div>
-          <div>
-            <img src="" alt="" />
-          </div>
-          <div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in
-            </p>
-          </div>
-          <div>
-            <button>Create New Project</button>
-          </div>
-        </div>
-      </div>
+      {/* <CreateProjectPage /> */}
+      <ProjectPage />
     </>
   );
 }
