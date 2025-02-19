@@ -4,18 +4,23 @@
   background-size: cover; /* Cover the container */
   background-position: center;
   height: 100vh;
+
+  display: flex;
 }
 .about-container {
   width: 66%;
-  height: 100vh;
+  height: 100%;
   position: relative;
   /* background: linear-gradient(231.62deg, #c37eff -26.53%, #3a0b63 117.16%); */
   background: linear-gradient(231.62deg, #c854ff -26.53%, #3a0b63 117.16%);
+  overflow: hidden;
 }
 .design {
   position: absolute;
+  /* position: fixed; */
   width: 100%;
-  height: 100%;
+  height: 1087px;
+  /* overflow: hidden; */
   background-image: url("../../assets/Maskgroup.png");
   background-repeat: no-repeat;
   background-position: center;
