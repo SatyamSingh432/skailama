@@ -1,7 +1,10 @@
 import "./WelcomePage.css";
 import whiteLogo from "../../assets/QuesLogo.svg";
 import Login from "./Login";
+import Register from "./Register";
+import { useState } from "react";
 const WelcomePage = () => {
+  const [hasAccount, setHasAccount] = useState(true);
   return (
     <>
       <div className="welcome-container">
@@ -20,7 +23,11 @@ const WelcomePage = () => {
           </div>
         </div>
         <div className="login-register-container">
-          <Login />
+          {hasAccount ? (
+            <Login setHasAccount={setHasAccount} />
+          ) : (
+            <Register setHasAccount={setHasAccount} />
+          )}
         </div>
       </div>
     </>

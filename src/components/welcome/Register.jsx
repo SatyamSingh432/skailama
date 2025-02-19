@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import "./Login.css";
 import logo from "../../assets/login.svg";
-const Login = ({ setHasAccount }) => {
-  const registerHandler = () => {
-    setHasAccount(false);
+const Register = ({ setHasAccount }) => {
+  const loginHandler = () => {
+    setHasAccount(true);
   };
   return (
     <div className="login-container">
@@ -21,17 +21,15 @@ const Login = ({ setHasAccount }) => {
         <div className="form-container">
           <input type="email" placeholder="Email Address" />
           <input type="password" placeholder="Password" />
-          <div className="rem-for-container">
-            <div className="rem-container">
-              <input type="checkbox" />
-              <p>Remember me</p>
-            </div>
-            <p>Forgot password?</p>
+          <div className="confirm-pass">
+            <p>Password must be atleast 6 characters length</p>
           </div>
-          <button>Login</button>
+          <input type="password" placeholder="Confirm Password" />
+
+          <button>Register Now</button>
           <p>
-            Don’t have an account?
-            <span onClick={registerHandler}>Create Account</span>
+            Already have an account?{" "}
+            <span onClick={loginHandler}>Login here</span>
           </p>
         </div>
       </div>
@@ -39,4 +37,4 @@ const Login = ({ setHasAccount }) => {
   );
 };
 
-export default Login;
+export default Register;
