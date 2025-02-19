@@ -1,10 +1,8 @@
-import "./App.css";
-// import WelcomePage from "./components/welcome/WelcomePage";
-import CreateProjectPage from "./components/createpage/CreateProjectPage";
-function App() {
+import NavBar from "./NavBar";
+const CreateProjectPage = () => {
   return (
     <>
-      <CreateProjectPage />
+      <NavBar />
       <div className="create-page-">
         <h1>Create a New Project</h1>
         <div>
@@ -27,6 +25,6 @@ function App() {
       </div>
     </>
   );
-}
+};
 
-export default App;
+export default CreateProjectPage;
