@@ -9,8 +9,8 @@ const WelcomePage = () => {
     <>
       <div className="welcome-container">
         <div className="about-container">
+          <div className="design"></div>
           <div className="about-child-container">
-            <div className="design"></div>
             <div className="about-container-logo">
               <img src={whiteLogo} alt="" style={{ color: "green" }} />
             </div>

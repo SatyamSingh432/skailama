@@ -34,10 +34,12 @@
   color: #838383;
   padding-bottom: 3rem;
 }
+
 .create-page-button {
   width: 349.8px;
   height: 67.48px;
 }
+
 .create-page-button button {
   width: 100%;
   display: flex;

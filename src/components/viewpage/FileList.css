@@ -1,15 +1,15 @@
 .file-list-container {
   width: 100%;
   background: white;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 1.25rem;
+  border-radius: 0.5rem;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
   text-align: start;
 }
 
 h2 {
-  font-size: 18px;
-  margin-bottom: 10px;
+  font-size: 1.125rem;
+  margin-bottom: 0.625rem;
 }
 
 .file-table {
@@ -19,7 +19,7 @@ h2 {
 
 .file-table th,
 .file-table td {
-  padding: 12px;
+  padding: 0.75rem;
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
@@ -36,14 +36,13 @@ h2 {
 .view-btn {
   background: white;
   border: 1px solid #ccc;
-  padding: 5px 10px;
+  padding: 0.3125rem 0.625rem;
   cursor: pointer;
-  margin-right: 5px;
+  margin-right: 0.3125rem;
 }
 
 .delete-btn {
   background: none;
-
   border: none;
   color: red;
   cursor: pointer;

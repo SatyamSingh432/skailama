@@ -33,7 +33,7 @@ const SideBar = () => {
           </a>
         </nav>
         <hr className="hr" />
-        <div className="setting">
+        <div className="sidebar-setting">
           <IoSettingsOutline style={{ fontSize: "16px" }} />
           <span>Help</span>
         </div>

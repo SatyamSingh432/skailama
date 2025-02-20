@@ -17,20 +17,20 @@
   padding: 3rem;
   width: 83rem;
   /* height: 28.6rem; */
-  border-radius: 33px;
+  border-radius: 2.0625rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
+
 .modal-content-child {
-  /* width: 96%; */
   display: flex;
   justify-content: start;
   flex-direction: column;
 }
 
 .modal-content-child h2 {
-  font-size: 50px;
-  margin-bottom: 15px;
+  font-size: 3.125rem;
+  margin-bottom: 0.9375rem;
   text-align: start;
   padding-bottom: 1.5rem;
 }
@@ -39,25 +39,24 @@
   display: block;
   font-weight: bold;
   text-align: start;
-  font-size: 30px;
+  font-size: 1.875rem;
   padding-bottom: 1rem;
   color: grey;
 }
 
 .modal-content-child input {
-  /* width: 98%; */
-  height: 70px;
-  border-radius: 7px;
-  font-size: 40px;
-  padding: 8px;
+  height: 4.375rem;
+  border-radius: 0.4375rem;
+  font-size: 2.5rem;
+  padding: 0.5rem;
   border: 1px solid #ccc;
 }
 
 .modal-buttons {
   display: flex;
   justify-content: end;
-  gap: 40px;
-  margin-top: 15px;
+  gap: 2.5rem;
+  margin-top: 0.9375rem;
 }
 
 .cancel-btn {
@@ -66,26 +65,26 @@
   color: red;
   font-weight: bold;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 1.875rem;
 }
 
 .create-btn {
   background-color: black;
-  /* padding: 1rem, 0.5rem; */
-  font-size: 30px;
+  font-size: 1.875rem;
   font-weight: 700;
   color: white;
   border: none;
-  padding: 18px 30px;
-
-  border-radius: 15px;
+  padding: 1.125rem 1.875rem;
+  border-radius: 0.9375rem;
   cursor: pointer;
 }
+
 .textarea {
-  height: 173px;
-  border-radius: 7px;
-  font-size: 30px;
+  height: 10.8125rem;
+  border-radius: 0.4375rem;
+  font-size: 1.875rem;
 }
+
 .header-nav {
   display: flex;
   justify-content: space-between;
