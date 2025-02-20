@@ -12,11 +12,11 @@ const UploadModal = ({
 }) => {
   const [projectName, setProjectName] = useState("");
   const [transcript, setTransscript] = useState("");
-
+  const token = localStorage.getItem("token");
   const handleCreate = async (e) => {
     e.preventDefault();
     console.log(projectName, transcript);
-    await createFile(projectName, transcript, projectId);
+    await createFile(projectName, transcript, projectId, token);
     await getFilesOfProject();
     setTransscript("");
     setProjectName("");

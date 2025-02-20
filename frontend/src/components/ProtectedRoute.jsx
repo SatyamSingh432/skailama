@@ -6,7 +6,6 @@ import { verifyToken } from "../utils/api";
 const ProtectedRoute = ({ children }) => {
   const [isValid, setIsValid] = useState(null);
   const token = localStorage.getItem("token");
-
   useEffect(() => {
     const verify = async () => {
       if (!token) {

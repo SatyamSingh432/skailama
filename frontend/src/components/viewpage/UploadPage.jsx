@@ -12,6 +12,7 @@ import { getFiles, getProjectById, updateFile } from "../../utils/api";
 import EditTranscript from "./EditTranscript";
 
 const UploadPage = () => {
+  const token = localStorage.getItem("token");
   const { projectId } = useParams();
   const navigate = useNavigate();
   const [project, setProject] = useState({});
@@ -26,7 +27,7 @@ const UploadPage = () => {
 
   const getFilesOfProject = async () => {
     try {
-      const result = await getFiles(projectId);
+      const result = await getFiles(projectId, token);
       if (result) {
         setFiles(result);
       }
@@ -37,7 +38,7 @@ const UploadPage = () => {
 
   const getProjectDetails = async () => {
     try {
-      const project = await getProjectById(projectId);
+      const project = await getProjectById(projectId, token);
       if (project) {
         setProject(project);
       }
@@ -56,7 +57,7 @@ const UploadPage = () => {
   };
 
   const saveTranscript = async (fileId, text) => {
-    const res = await updateFile(fileId, text);
+    const res = await updateFile(fileId, text, token);
     setEditingFile(res);
     console.log({ res });
   };

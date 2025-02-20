@@ -11,9 +11,10 @@ import { createProject, getProjects } from "../../utils/api";
 const CreateProjectPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [allProjects, setAllProjects] = useState([]);
-  console.log(allProjects);
+
+  const token = localStorage.getItem("token");
   const getAllProjects = async () => {
-    const result = await getProjects();
+    const result = await getProjects(token);
     if (result.length) {
       setAllProjects(result);
     }
@@ -25,7 +26,7 @@ const CreateProjectPage = () => {
 
   const createNewProject = async (projectName) => {
     try {
-      const res = await createProject(projectName);
+      const res = await createProject(projectName, token);
       if (res) {
         await getAllProjects();
       }

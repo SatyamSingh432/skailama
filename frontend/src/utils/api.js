@@ -1,17 +1,17 @@
 const API_URL = "https://skailama-ez1j.onrender.com";
 
-const token = localStorage.getItem("token");
-
 export const loginUser = async (email, password) => {
   const res = await fetch(`${API_URL}/api/auth/login`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email, password }),
   });
-  return res.json();
+  const resJson = await res.json();
+  localStorage.setItem("token", resJson.token);
+  return resJson;
 };
 
-export const verifyToken = async () => {
+export const verifyToken = async (token) => {
   const res = await fetch(`${API_URL}/api/auth/verify`, {
     method: "GET",
     headers: { Authorization: token },
@@ -28,7 +28,7 @@ export const registerUser = async (name, email, password) => {
   return res.json();
 };
 
-export const createProject = async (name) => {
+export const createProject = async (name, token) => {
   const res = await fetch(`${API_URL}/api/projects`, {
     method: "POST",
     headers: { "Content-Type": "application/json", Authorization: token },
@@ -37,7 +37,7 @@ export const createProject = async (name) => {
   return res.json();
 };
 
-export const getProjects = async () => {
+export const getProjects = async (token) => {
   const res = await fetch(`${API_URL}/api/projects`, {
     method: "GET",
     headers: { Authorization: token },
@@ -45,7 +45,7 @@ export const getProjects = async () => {
   return res.json();
 };
 
-export const getProjectById = async (projectId) => {
+export const getProjectById = async (projectId, token) => {
   const res = await fetch(`${API_URL}/api/projects/${projectId}`, {
     method: "GET",
     headers: { Authorization: token },
@@ -53,7 +53,7 @@ export const getProjectById = async (projectId) => {
   return res.json();
 };
 
-export const createFile = async (name, transcript, projectId) => {
+export const createFile = async (name, transcript, projectId, token) => {
   const res = await fetch(`${API_URL}/api/files`, {
     method: "POST",
     headers: { "Content-Type": "application/json", Authorization: token },
@@ -62,7 +62,7 @@ export const createFile = async (name, transcript, projectId) => {
   return res.json();
 };
 
-export const getFiles = async (projectId) => {
+export const getFiles = async (projectId, token) => {
   const res = await fetch(`${API_URL}/api/files/${projectId}`, {
     method: "GET",
     headers: { Authorization: token },
@@ -70,7 +70,7 @@ export const getFiles = async (projectId) => {
   return res.json();
 };
 
-export const updateFile = async (fileId, transcript) => {
+export const updateFile = async (fileId, transcript, token) => {
   const res = await fetch(`${API_URL}/api/files/${fileId}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json", Authorization: token },
