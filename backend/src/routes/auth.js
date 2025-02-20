@@ -42,4 +42,18 @@ router.post("/login", async (req, res) => {
   }
 });
 
+// Verify Token
+router.get("/verify", async (req, res) => {
+  const token = req.header("Authorization");
+  if (!token)
+    return res.status(401).json({ valid: false, message: "No token provided" });
+
+  try {
+    const verified = jwt.verify(token, process.env.JWT_SECRET);
+    res.json({ valid: true, userId: verified.id });
+  } catch (err) {
+    res.status(401).json({ valid: false, message: "Invalid token" });
+  }
+});
+
 export default router;
