@@ -1,0 +1,93 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  box-sizing: border-box;
+  background: white;
+  padding: 3rem;
+  width: 83rem;
+  /* height: 28.6rem; */
+  border-radius: 33px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.modal-content-child {
+  /* width: 96%; */
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+}
+
+.modal-content-child h2 {
+  font-size: 50px;
+  margin-bottom: 15px;
+  text-align: start;
+  padding-bottom: 1.5rem;
+}
+
+.modal-content-child label {
+  display: block;
+  font-weight: bold;
+  text-align: start;
+  font-size: 30px;
+  padding-bottom: 1rem;
+  color: grey;
+}
+
+.modal-content-child input {
+  /* width: 98%; */
+  height: 70px;
+  border-radius: 7px;
+  font-size: 40px;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: end;
+  gap: 40px;
+  margin-top: 15px;
+}
+
+.cancel-btn {
+  background: none;
+  border: none;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.create-btn {
+  background-color: black;
+  /* padding: 1rem, 0.5rem; */
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  border: none;
+  padding: 18px 30px;
+
+  border-radius: 15px;
+  cursor: pointer;
+}
+.textarea {
+  height: 173px;
+  border-radius: 7px;
+  font-size: 30px;
+}
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
