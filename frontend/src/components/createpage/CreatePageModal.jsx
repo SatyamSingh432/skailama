@@ -1,16 +1,16 @@
-/* eslint-disable react/prop-types */
 import { useState } from "react";
 import "./CreatePageModal.css";
-const CreateProjectModal = ({ isOpen, onClose }) => {
+
+const CreateProjectModal = ({ isOpen, onClose, createNewProject }) => {
   const [projectName, setProjectName] = useState("");
   const [error, setError] = useState("");
 
-  const handleCreate = () => {
+  const handleCreate = async () => {
     if (!projectName.trim()) {
       setError("Project Name Can't be empty");
       return;
     }
-    console.log("Project Created:", projectName);
+    await createNewProject(projectName.trim());
     setProjectName("");
     setError("");
     onClose();

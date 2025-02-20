@@ -22,7 +22,7 @@ const WelcomePage = () => {
       try {
         const data = await verifyToken(token);
         if (data.valid) {
-          navigate("/createprojectpage");
+          navigate("/projects");
         }
       } catch (err) {
         console.error(err);

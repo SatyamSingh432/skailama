@@ -17,7 +17,7 @@ const Login = ({ setHasAccount }) => {
     const res = await loginUser(email, password);
     if (res.token) {
       localStorage.setItem("token", res.token);
-      navigate("/createprojectpage");
+      navigate("/projects");
     }
     setErr("Invalid username or password");
   };
