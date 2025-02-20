@@ -1,0 +1,50 @@
+.edit-transcript-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.transcript-button {
+  background-color: black;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: white;
+  border: none;
+  padding: 1rem 4rem;
+  border-radius: 0.9375rem;
+  cursor: pointer;
+}
+
+.transcript-content {
+  box-shadow: 0px 1.31px 2.63px 0px rgba(0, 0, 0, 0.06),
+    0px 5.25px 5.25px 0px rgba(0, 0, 0, 0.05),
+    0px 10.5px 6.56px 0px rgba(0, 0, 0, 0.03),
+    0px 18.38px 7.88px 0px rgba(0, 0, 0, 0.01),
+    0px 28.88px 7.88px 0px rgba(0, 0, 0, 0);
+
+  border: 0.67px solid rgba(199, 199, 199, 1);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 1);
+  height: 60%;
+  margin-top: 1rem;
+  padding: 2rem;
+}
+
+.transcript-speaker {
+  color: rgba(126, 34, 206, 1);
+  margin-bottom: 10px;
+}
+
+.transcript-textarea {
+  border: none;
+  height: 100%;
+  width: 100%;
+  line-height: 1.6;
+}
+
+.discard-button {
+  background-color: transparent;
+  color: red;
+  border: red 2px solid;
+  margin-right: 10px;
+}

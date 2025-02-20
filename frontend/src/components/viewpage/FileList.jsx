@@ -1,7 +1,5 @@
 import "./FileList.css";
-const FileList = ({ files }) => {
-  // ];
-
+const FileList = ({ files, editTranscript }) => {
   return (
     <div className="file-list-container">
       <h2>Your Files</h2>
@@ -24,7 +22,12 @@ const FileList = ({ files }) => {
                 {new Date(file.updatedAt).toLocaleTimeString()}
               </td>
               <td>
-                <button className="view-btn">View</button>
+                <button
+                  onClick={() => editTranscript(file)}
+                  className="view-btn"
+                >
+                  View
+                </button>
                 <button className="delete-btn">Delete</button>
               </td>
             </tr>

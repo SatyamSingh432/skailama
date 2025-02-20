@@ -1,18 +1,28 @@
-/* eslint-disable react/prop-types */
 import { useState } from "react";
 import "./UploadModal.css";
 import { RxCross2 } from "react-icons/rx";
-const UploadModal = ({ isOpen, onClose, heading, setShowList }) => {
+import { createFile } from "../../utils/api";
+
+const UploadModal = ({
+  isOpen,
+  onClose,
+  heading,
+  projectId,
+  getFilesOfProject,
+}) => {
   const [projectName, setProjectName] = useState("");
   const [transcript, setTransscript] = useState("");
-  const handleCreate = (e) => {
+
+  const handleCreate = async (e) => {
     e.preventDefault();
     console.log(projectName, transcript);
+    await createFile(projectName, transcript, projectId);
+    await getFilesOfProject();
     setTransscript("");
     setProjectName("");
     onClose();
-    setShowList(false);
   };
+
   if (!isOpen) return null;
   return (
     <div className="modal-overlay">
