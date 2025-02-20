@@ -4,13 +4,13 @@ import cors from "cors";
 import dotenv from "dotenv";
 
 import authRouter from "./routes/auth.js";
-import authMiddleware from "./middleware/authMiddleware.js";
-
 dotenv.config();
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+app.use("/api/auth", authRouter);
 
 mongoose
   .connect(process.env.MONGODB_URI)
@@ -21,10 +21,3 @@ mongoose
     });
   })
   .catch((err) => console.log(err));
-
-app.use(authRouter);
-
-app.get("/testauth", authMiddleware, (req, res) => {
-  const user = req.user;
-  res.json({ msg: "hello world", user });
-});
