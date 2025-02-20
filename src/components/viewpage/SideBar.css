@@ -66,6 +66,7 @@
 .setting span {
   font-size: 1.56rem;
   padding-left: 0.8rem;
+  cursor: pointer;
 }
 .hr {
   width: 21.67rem;

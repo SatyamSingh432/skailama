@@ -14,27 +14,27 @@ const SideBar = () => {
       <div className="sidebar-child-container">
         <nav className="sidebar-menu">
           <a href="#" className="sidebar-option active">
-            <FaPlus style={{ fontSize: "1rem", paddingRight: "0.8rem" }} /> Add
+            <FaPlus style={{ fontSize: "16px", paddingRight: "0.8rem" }} /> Add
             your Podcast(s)
           </a>
           <a href="#" className="sidebar-option">
-            <GoPencil style={{ fontSize: "1rem", paddingRight: "0.8rem" }} />{" "}
+            <GoPencil style={{ fontSize: "16px", paddingRight: "0.8rem" }} />{" "}
             Create & Repurpose
           </a>
           <a href="#" className="sidebar-option">
-            <GoCopy style={{ fontSize: "1rem", paddingRight: "0.8rem" }} />{" "}
+            <GoCopy style={{ fontSize: "16px", paddingRight: "0.8rem" }} />{" "}
             Podcast Widget
           </a>
           <a href="#" className="sidebar-option">
             <RiVipDiamondLine
-              style={{ fontSize: "1rem", paddingRight: "0.8rem" }}
-            />{" "}
+              style={{ fontSize: "1rem", paddingRight: "1rem" }}
+            />
             Upgrade
           </a>
         </nav>
         <hr className="hr" />
         <div className="setting">
-          <IoSettingsOutline style={{ fontSize: "1rem" }} />
+          <IoSettingsOutline style={{ fontSize: "16px" }} />
           <span>Help</span>
         </div>
         <hr className="hr" />
