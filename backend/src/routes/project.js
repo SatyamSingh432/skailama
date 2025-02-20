@@ -33,4 +33,15 @@ router.get("/", authMiddleware, async (req, res) => {
   }
 });
 
+router.get("/:projectId", authMiddleware, async (req, res) => {
+  try {
+    const project = await Project.findById({
+      _id: req.params.projectId,
+    });
+    res.json(project);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
 export default router;
