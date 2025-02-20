@@ -1,49 +1,6 @@
 import "./FileList.css";
-const FileList = () => {
-  const files = [
-    {
-      id: 1,
-      name: "THE SIDEPOD S2 EPISODE 15",
-      date: "25 Oct 23",
-      time: "09:04",
-    },
-    {
-      id: 2,
-      name: "THE SIDEPOD S2 EPISODE 17",
-      date: "27 Oct 23",
-      time: "11:08",
-    },
-    {
-      id: 3,
-      name: "THE SIDEPOD S2 EPISODE 20",
-      date: "31 Oct 23",
-      time: "20:28",
-    },
-    {
-      id: 4,
-      name: "THE SIDEPOD S2 EPISODE 20",
-      date: "31 Oct 23",
-      time: "20:28",
-    },
-    {
-      id: 5,
-      name: "THE SIDEPOD S2 EPISODE 20",
-      date: "31 Oct 23",
-      time: "20:28",
-    },
-    {
-      id: 6,
-      name: "THE SIDEPOD S2 EPISODE 20",
-      date: "31 Oct 23",
-      time: "20:28",
-    },
-    {
-      id: 7,
-      name: "THE SIDEPOD S2 EPISODE 20",
-      date: "31 Oct 23",
-      time: "20:28",
-    },
-  ];
+const FileList = ({ files }) => {
+  // ];
 
   return (
     <div className="file-list-container">
@@ -59,11 +16,12 @@ const FileList = () => {
         </thead>
         <tbody>
           {files.map((file, index) => (
-            <tr key={file.id}>
+            <tr key={file._id}>
               <td>{index + 1}</td>
               <td>{file.name}</td>
               <td>
-                {file.date} | {file.time}
+                {new Date(file.updatedAt).toLocaleDateString()}{" "}
+                {new Date(file.updatedAt).toLocaleTimeString()}
               </td>
               <td>
                 <button className="view-btn">View</button>

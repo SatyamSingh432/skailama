@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 import CreateProjectModal from "./CreatePageModal";
 
 import "./ProjectPage.css";
@@ -10,6 +12,8 @@ const ProjectPage = ({
   isOpen,
   onClose,
 }) => {
+  const navigate = useNavigate();
+
   const getProjectIcon = (str) => {
     let arr = str.split(" ");
     let newStr = [];
@@ -36,7 +40,13 @@ const ProjectPage = ({
             {allProjects.map((project) => {
               const projectName = project.name;
               return (
-                <div key={project._id} className="project-card">
+                <div
+                  onClick={() => {
+                    navigate(`/projects/${project._id}`);
+                  }}
+                  key={project._id}
+                  className="project-card"
+                >
                   <div className="project-icon">
                     {getProjectIcon(projectName)}
                   </div>

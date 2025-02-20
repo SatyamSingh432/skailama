@@ -21,7 +21,7 @@ function App() {
           }
         />
         <Route
-          path="/uploadpage"
+          path="/projects/:projectId"
           element={
             <ProtectedRoute>
               <UploadPage />

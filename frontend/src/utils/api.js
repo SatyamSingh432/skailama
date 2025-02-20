@@ -1,4 +1,4 @@
-const API_URL = "https://skailama-ez1j.onrender.com";
+const API_URL = "http://localhost:8080"; // "https://skailama-ez1j.onrender.com";
 
 const token = localStorage.getItem("token");
 
@@ -39,6 +39,14 @@ export const createProject = async (name) => {
 
 export const getProjects = async () => {
   const res = await fetch(`${API_URL}/api/projects`, {
+    method: "GET",
+    headers: { Authorization: token },
+  });
+  return res.json();
+};
+
+export const getProjectById = async (projectId) => {
+  const res = await fetch(`${API_URL}/api/projects/${projectId}`, {
     method: "GET",
     headers: { Authorization: token },
   });
