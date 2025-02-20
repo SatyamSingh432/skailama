@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8080"; // "https://skailama-ez1j.onrender.com";
+const API_URL = "https://skailama-ez1j.onrender.com";
 
 const token = localStorage.getItem("token");
 

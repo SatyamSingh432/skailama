@@ -43,6 +43,7 @@
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .project-card {
@@ -54,6 +55,7 @@
   padding: 1rem;
   box-sizing: border-box;
   gap: 1.25rem;
+  cursor: pointer;
 }
 
 .project-icon {
