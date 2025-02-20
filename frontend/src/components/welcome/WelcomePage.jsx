@@ -1,10 +1,36 @@
-import "./WelcomePage.css";
-import whiteLogo from "../../assets/QuesLogo.svg";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import Login from "./Login";
 import Register from "./Register";
-import { useState } from "react";
+import { verifyToken } from "../../utils/api";
+
+import "./WelcomePage.css";
+import whiteLogo from "../../assets/QuesLogo.svg";
+
 const WelcomePage = () => {
   const [hasAccount, setHasAccount] = useState(true);
+  const navigate = useNavigate();
+
+  const token = localStorage.getItem("token");
+
+  useEffect(() => {
+    const verify = async () => {
+      if (!token) {
+        return;
+      }
+      try {
+        const data = await verifyToken(token);
+        if (data.valid) {
+          navigate("/createprojectpage");
+        }
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    verify();
+  }, [token]);
+
   return (
     <>
       <div className="welcome-container">

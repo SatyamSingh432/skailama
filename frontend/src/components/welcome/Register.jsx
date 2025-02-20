@@ -1,10 +1,12 @@
-/* eslint-disable react/prop-types */
 import "./Login.css";
 import logo from "../../assets/login.svg";
 const Register = ({ setHasAccount }) => {
   const loginHandler = () => {
     setHasAccount(true);
   };
+
+  const registerHandler = () => {};
+
   return (
     <div className="login-container">
       <div className="login-child-container">
@@ -18,7 +20,7 @@ const Register = ({ setHasAccount }) => {
             </p>
           </div>
         </div>
-        <div className="form-container">
+        <form onSubmit={registerHandler} className="form-container">
           <input type="email" placeholder="Email Address" />
           <input type="password" placeholder="Password" />
           <div className="confirm-pass">
@@ -26,12 +28,12 @@ const Register = ({ setHasAccount }) => {
           </div>
           <input type="password" placeholder="Confirm Password" />
 
-          <button>Register Now</button>
+          <button type="submit">Register Now</button>
           <p>
             Already have an account?{" "}
             <span onClick={loginHandler}>Login here</span>
           </p>
-        </div>
+        </form>
       </div>
     </div>
   );
