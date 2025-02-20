@@ -1,5 +1,5 @@
 import "./SideBar.css";
-import logo from "../../assets/QuesLogoP.SVG";
+import logo from "../../assets/QuesLogoP.svg";
 import { FaPlus } from "react-icons/fa6";
 import { GoPencil } from "react-icons/go";
 import { GoCopy } from "react-icons/go";
