@@ -1,0 +1,103 @@
+html {
+  font-size: 12.2px;
+}
+.upload-container {
+  display: flex;
+}
+.add-podcast-container {
+  padding-top: 4rem;
+  padding-right: 4rem;
+  padding-left: 31.66rem;
+}
+
+.breadcrumb {
+  font-size: 1.61rem;
+  color: #777;
+  font-weight: 700;
+  letter-spacing: 0.01rem;
+}
+.breadcrumb .active {
+  color: #7e22ce;
+  background-color: #ffffff;
+  font-weight: bold;
+}
+
+.page-title {
+  font-weight: 600;
+  font-size: 2.81rem;
+  letter-spacing: 0.02rem;
+  padding-top: 2.06rem;
+  padding-bottom: 2rem;
+}
+
+.upload-options {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.upload-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 0.63rem;
+  box-shadow: 0 0 0.63rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.63rem;
+  height: 9.38rem;
+  border: 0.04rem solid #c7c7c7;
+  cursor: pointer;
+}
+.upload-card img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.upload-card-info h2 {
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 0.01rem;
+}
+
+.file-upload {
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  height: 300px;
+  margin-top: 3rem;
+  overflow-y: scroll;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.cloud-icon {
+  width: 7.5rem;
+  height: 7.5rem;
+  padding-bottom: 2.56rem;
+}
+.upload-text {
+  font-weight: 400;
+  font-size: 1.9rem;
+  padding-bottom: 1.25rem;
+}
+.file-formats {
+  color: #777;
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #00000066;
+  padding-bottom: 1.25rem;
+}
+.upload-btn {
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  border: 2px solid #6b3eff;
+  background: none;
+  color: #6b3eff;
+  border-radius: 2.5rem;
+  font-size: 1.63rem;
+  cursor: pointer;
+  margin-bottom: 4.44rem;
+}
+.upload-btn:hover {
+  color: #fff;
+  background-color: var(--primary-color);
+}
