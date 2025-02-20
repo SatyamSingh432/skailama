@@ -2,7 +2,7 @@
 import { useState } from "react";
 import "./UploadModal.css";
 import { RxCross2 } from "react-icons/rx";
-const UploadModal = ({ isOpen, onClose, heading }) => {
+const UploadModal = ({ isOpen, onClose, heading, setShowList }) => {
   const [projectName, setProjectName] = useState("");
   const [transcript, setTransscript] = useState("");
   const handleCreate = (e) => {
@@ -11,6 +11,7 @@ const UploadModal = ({ isOpen, onClose, heading }) => {
     setTransscript("");
     setProjectName("");
     onClose();
+    setShowList(false);
   };
   if (!isOpen) return null;
   return (

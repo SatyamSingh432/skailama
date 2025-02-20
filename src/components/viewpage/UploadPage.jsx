@@ -8,7 +8,7 @@ import image4 from "../../assets/cloud_upload.png";
 import UploadModal from "./UploadModal";
 import FileList from "./FileList";
 const UploadPage = () => {
-  const [showList, setShowList] = useState(false);
+  const [showList, setShowList] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalHeading, setIsModalHeading] = useState({
     heading: "",
@@ -98,6 +98,7 @@ const UploadPage = () => {
       <UploadModal
         isOpen={isModalOpen}
         heading={isModalHeading}
+        setShowList={setShowList}
         onClose={() => setIsModalOpen(false)}
       />
     </>
