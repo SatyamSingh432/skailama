@@ -5,7 +5,6 @@ import File from "../models/File.js";
 
 const router = express.Router();
 
-// Create a project
 router.post("/", authMiddleware, async (req, res) => {
   try {
     const { name } = req.body;
@@ -17,7 +16,6 @@ router.post("/", authMiddleware, async (req, res) => {
   }
 });
 
-// Get all projects with file count
 router.get("/", authMiddleware, async (req, res) => {
   try {
     const projects = await Project.find({ user: req.user.id }).lean();

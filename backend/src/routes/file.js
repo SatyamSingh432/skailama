@@ -4,7 +4,6 @@ import File from "../models/File.js";
 
 const router = express.Router();
 
-// Create a file
 router.post("/", authMiddleware, async (req, res) => {
   try {
     const { name, transcript, project } = req.body;
@@ -16,7 +15,6 @@ router.post("/", authMiddleware, async (req, res) => {
   }
 });
 
-// Get all files for a project
 router.get("/:projectId", authMiddleware, async (req, res) => {
   try {
     const files = await File.find({ project: req.params.projectId });
@@ -26,7 +24,6 @@ router.get("/:projectId", authMiddleware, async (req, res) => {
   }
 });
 
-// Update a file's transcript
 router.put("/:id", authMiddleware, async (req, res) => {
   try {
     const { transcript } = req.body;
