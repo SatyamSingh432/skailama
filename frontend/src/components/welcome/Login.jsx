@@ -38,8 +38,7 @@ const Login = ({ setHasAccount }) => {
             </p>
           </div>
         </div>
-        {/* TODO: Make error red and beautiful */}
-        {err && <div>{err}</div>}
+        {err && <div className="error-message">{err}</div>}
         <form onSubmit={loginHandler} className="form-container">
           <input
             type="email"

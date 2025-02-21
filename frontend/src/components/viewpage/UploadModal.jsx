@@ -25,10 +25,10 @@ const UploadModal = ({
 
   if (!isOpen) return null;
   return (
-    <div className="modal-overlay">
-      <div className="modal-content">
+    <div className="upload-modal-overlay">
+      <div className="upload-modal-content">
         <form onSubmit={handleCreate}>
-          <div className="modal-content-child">
+          <div className="upload-modal-content-child">
             <div className="header-nav">
               <h2>{heading.heading}</h2>
               <RxCross2
@@ -56,7 +56,7 @@ const UploadModal = ({
                 setTransscript(e.target.value);
               }}
             ></textarea>
-            <div className="modal-buttons">
+            <div className="upload-modal-buttons">
               <button className="create-btn" type="submit">
                 Upload
               </button>

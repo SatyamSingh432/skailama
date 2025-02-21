@@ -21,19 +21,20 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
+
 .modal-content-child {
-  /* width: 96%; */
   display: flex;
   justify-content: start;
   flex-direction: column;
 }
+
 input::placeholder {
   color: #a7a7a7;
   font-weight: 700;
   font-size: 30.26px;
   opacity: 0.8;
-  padding-left: 29.5px;
 }
+
 .modal-content-child h2 {
   font-size: 50px;
   margin-bottom: 15px;
@@ -51,7 +52,6 @@ input::placeholder {
 }
 
 .modal-content-child input {
-  /* width: 98%; */
   height: 80px;
   border-radius: 20px;
   font-size: 40px;
@@ -61,8 +61,8 @@ input::placeholder {
 
 .error-message {
   color: red;
-  font-size: 30px;
-  margin-top: 5px;
+  font-size: 24px;
+  margin: 5px;
   text-align: start;
 }
 
@@ -84,7 +84,6 @@ input::placeholder {
 
 .create-btn {
   background: #6c27db;
-  /* padding: 1rem, 0.5rem; */
   font-size: 30px;
   font-weight: 700;
   color: white;

@@ -100,6 +100,10 @@
   padding-bottom: 1.25rem;
 }
 
+.homepage-breadcrumb {
+  cursor: pointer;
+}
+
 .upload-btn {
   margin-top: 1rem;
   padding: 0.8rem 2rem;

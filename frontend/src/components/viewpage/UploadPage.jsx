@@ -68,8 +68,13 @@ const UploadPage = () => {
         <SideBar />
         <div className="add-podcast-container">
           <nav className="breadcrumb">
-            <span>Home Page</span> /{" "}
-            <span onClick={() => navigate("/projects")}>{project.name}</span> /
+            <span
+              className="homepage-breadcrumb"
+              onClick={() => navigate("/projects")}
+            >
+              Home Page
+            </span>{" "}
+            / <span>{project.name}</span> /{" "}
             <span className="active">Add your podcast</span>
           </nav>
           {editingFile ? (

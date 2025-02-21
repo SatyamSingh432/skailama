@@ -19,13 +19,18 @@ export const verifyToken = async (token) => {
   return res.json();
 };
 
-export const registerUser = async (name, email, password) => {
+export const registerUser = async (email, password) => {
   const res = await fetch(`${API_URL}/api/auth/register`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ name, email, password }),
+    body: JSON.stringify({ email, password }),
   });
-  return res.json();
+  if (res.ok) {
+    const resJson = await res.json();
+    localStorage.setItem("token", resJson.token);
+    return resJson;
+  }
+  return { error: true };
 };
 
 export const createProject = async (name, token) => {
