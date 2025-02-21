@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 
 import { verifyToken } from "../utils/api";
+import "./ProtectedRoute.css";
 
 const ProtectedRoute = ({ children }) => {
   const [isValid, setIsValid] = useState(null);
@@ -25,7 +26,7 @@ const ProtectedRoute = ({ children }) => {
   }, [token]);
 
   if (isValid === null) {
-    return <div>Loading...</div>;
+    return <div className="loading">Loading...</div>;
   }
 
   return isValid ? children : <Navigate to="/" />;
